@@ -23,7 +23,7 @@ func main() {
 			log.Println("Error reading body", err)
 
 			http.Error(rw, "Unable to read request body", http.StatusBadRequest)
-			return
+			return // it's needed to terminate the flow of the application
 		}
 
 		// write the response
